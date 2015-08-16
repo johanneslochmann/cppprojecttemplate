@@ -5,9 +5,9 @@
 #include <string>
 #include <vector>
 
-BEGIN_PROJECT_NAMESPACE
+PROJECT_NAMESPACE_BEGIN
 
 using String = std::string;
 using StringVector = std::vector<String>;
 
-END_PROJECT_NAMESPACE
+PROJECT_NAMESPACE_END
