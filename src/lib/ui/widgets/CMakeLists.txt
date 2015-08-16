@@ -1,11 +1,11 @@
-set(LIBNAME ${MODEL_LIBRARY_NAME})
+set(LIBNAME ${WIDGETS_LIBRARY_NAME})
 
 set(LIBVERSION_MAJOR 1)
 set(LIBVERSION_MINOR 0)
 set(LIBVERSION_PATCH 0)
 
-set(MODULE_PREFIX MODEL)
-set(MODULE_NAMESPACE Model)
+set(MODULE_PREFIX Widgets)
+set(MODULE_NAMESPACE Widgets)
 
 configure_file(config.hxx.in config.hxx)
 
@@ -16,11 +16,11 @@ set(CMAKE_CXX_FLAGS "${PROJECT_COMPILER_FLAGS}")
 
 set(HEADER_FILES
     config.hxx
-    model.hxx
+    label.hxx
 )
 
 set(SOURCE_FILES
-    model.cxx
+    label.cxx
 )
 
 add_library(${LIBNAME}
@@ -35,9 +35,10 @@ set_target_properties(${LIBNAME}
     SOVERSION ${LIBSOVERSION}
 )
 
+set(CMAKE_AUTOMOC ON)
+
 target_link_libraries(
     ${LIBNAME}
     ${CORE_LIBRARY_NAME}
+    ${Qt5Widgets_LIBRARIES}
 )
-
-add_subdirectory(test)
