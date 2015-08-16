@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 
-#include <core/tools.hxx>
+#include <infrastructure/core/tools.hxx>
 
 PROJECT_NAMESPACE_BEGIN
 

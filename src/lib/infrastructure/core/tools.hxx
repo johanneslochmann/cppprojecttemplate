@@ -1,6 +1,6 @@
 #pragma once
 
-#include <core/types.hxx>
+#include <infrastructure/core/types.hxx>
 
 PROJECT_NAMESPACE_BEGIN
 
