@@ -96,6 +96,7 @@ set(TEST_PROGRAM_PREFIX tst_)
 set(TEST_LIBRARY_PREFIX tst_lib_)
 
 set(CORE_LIBRARY_NAME ${LIBRARY_PREFIX}core)
+set(MODEL_LIBRARY_NAME ${LIBRARY_PREFIX}model)
 
 # print configuration summary
 MESSAGE(STATUS "gitstats: ${GITSTATS_PROGRAM}")
@@ -109,5 +110,6 @@ MESSAGE(STATUS "project prefix: ${PROJECT_PREFIX}")
 MESSAGE(STATUS "library prefix: ${LIBRARY_PREFIX}")
 MESSAGE(STATUS "test program prefix: ${TEST_PROGRAM_PREFIX}")
 MESSAGE(STATUS "core library: ${CORE_LIBRARY_NAME}")
+MESSAGE(STATUS "model library: ${MODEL_LIBRARY_NAME}")
 
 add_subdirectory(src)

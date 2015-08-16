@@ -1,0 +1,17 @@
+#include "model.hxx"
+
+PROJECT_NAMESPACE_BEGIN
+MODEL_NAMESPACE_BEGIN
+
+Model::Model()
+{
+
+}
+
+Model::~Model()
+{
+
+}
+
+MODEL_NAMESPACE_END
+PROJECT_NAMESPACE_END
