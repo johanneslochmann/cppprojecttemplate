@@ -1,6 +1,11 @@
 #pragma once
 
+#include <ui/widgets/config.hxx>
+
 #include <QLabel>
+
+PROJECT_NAMESPACE_BEGIN
+WIDGETS_NAMESPACE_BEGIN
 
 class Label: public QLabel
 {
@@ -8,3 +13,6 @@ class Label: public QLabel
 public:
     explicit Label(QWidget* p = nullptr);
 };
+
+PROJECT_NAMESPACE_END
+WIDGETS_NAMESPACE_END

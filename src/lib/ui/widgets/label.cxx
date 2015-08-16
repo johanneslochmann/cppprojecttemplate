@@ -1,7 +1,12 @@
 #include "label.hxx"
 
+PROJECT_NAMESPACE_BEGIN
+WIDGETS_NAMESPACE_BEGIN
+
 Label::Label(QWidget *p)
     : QLabel(p)
 {
 }
 
+PROJECT_NAMESPACE_END
+WIDGETS_NAMESPACE_END
