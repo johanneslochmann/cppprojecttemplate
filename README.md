@@ -5,10 +5,14 @@ C++ project template
 This is a project template with the following features:
 
 - managed by cmake
+- outputs dependencies as a graph (make dependencies dependencygraph)
+
+- discovers and uses boost libraries
+- discovers and uses threads library (required by gtest)
 - discovers and uses gtest
 - discovers and uses clang
+- discovers and uses libpqxx via buildsys/FindPqxx.cmake
 
-- optionally discovers and uses libpqxx via buildsys/FindPqxx.cmake
 - optionally discovers and uses sloccount via buildsys/FindSloccount.cmake
 - optionally discovers and uses json library via buildsys/Findjson.cmake
 - optionally discovers and uses gitsts via buildsys/FindGitstats.cmake
