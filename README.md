@@ -1,0 +1,2 @@
+# cppprojecttemplate
+C++ project template
