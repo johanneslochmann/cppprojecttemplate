@@ -10,6 +10,8 @@ DatabaseConnectionStatusLabel::DatabaseConnectionStatusLabel(QWidget* p)
 {
     connect(APP_NAMESPACE::App::get(), &APP_NAMESPACE::App::databaseIsAvailable, this, &DatabaseConnectionStatusLabel::onDatabaseAvailable);
     connect(APP_NAMESPACE::App::get(), &APP_NAMESPACE::App::databaseIsUnavailable, this, &DatabaseConnectionStatusLabel::onDatabaseUnavailable);
+
+    onDatabaseUnavailable(tr("Database not available"));
 }
 
 void DatabaseConnectionStatusLabel::onDatabaseAvailable(const QString &msg)
