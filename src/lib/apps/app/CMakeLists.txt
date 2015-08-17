@@ -19,11 +19,13 @@ set(HEADER_FILES
     config.hxx
     app.hxx
     action.hxx
+    databaseaction.hxx
 )
 
 set(SOURCE_FILES
     app.cxx
     action.cxx
+    databaseaction.cxx
 )
 
 add_library(${LIBNAME}
