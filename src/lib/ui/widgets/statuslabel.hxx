@@ -8,7 +8,7 @@ WIDGETS_NAMESPACE_BEGIN
 class StatusLabel : public Label
 {
 public:
-    explicit StatusLabel(QWidget* p = nullptr);
+    using Label::Label;
 };
 
 WIDGETS_NAMESPACE_END
