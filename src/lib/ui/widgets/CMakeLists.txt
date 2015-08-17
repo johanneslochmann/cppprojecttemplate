@@ -13,18 +13,21 @@ set(LIBSOVERSION ${LIBVERSION_MAJOR})
 set(LIBVERSION ${LIBVERSION_MAJOR}.${LIBVERSION_MINOR}.${LIBVERSION_PATCH})
 
 set(CMAKE_CXX_FLAGS "${PROJECT_COMPILER_FLAGS}")
+set(CMAKE_AUTOMOC ON)
 
 set(HEADER_FILES
     config.hxx
     label.hxx
     statuslabel.hxx
     databaseconnectionstatuslabel.hxx
+    mainwindow.hxx
 )
 
 set(SOURCE_FILES
     label.cxx
     statuslabel.cxx
     databaseconnectionstatuslabel.cxx
+    mainwindow.cxx
 )
 
 add_library(${LIBNAME}
@@ -39,10 +42,9 @@ set_target_properties(${LIBNAME}
     SOVERSION ${LIBSOVERSION}
 )
 
-set(CMAKE_AUTOMOC ON)
-
 target_link_libraries(
     ${LIBNAME}
     ${CORE_LIBRARY_NAME}
+    ${APP_LIBRARY_NAME}
     ${Qt5Widgets_LIBRARIES}
 )

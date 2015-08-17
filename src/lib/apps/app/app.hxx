@@ -2,7 +2,7 @@
 
 #include <apps/app/config.hxx>
 
-#include <QApplication>
+#include <QtWidgets/QApplication>
 
 #include <db/pgconn/connectiondata.hxx>
 #include <db/pgconn/connection.hxx>

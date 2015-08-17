@@ -8,6 +8,13 @@ Connection::Connection(QObject *parent)
 {
 }
 
+Connection::~Connection()
+{
+    if (m_conn) {
+        delete m_conn;
+    }
+}
+
 void Connection::connectToDatabase(const ConnectionData &cd)
 {
     try {

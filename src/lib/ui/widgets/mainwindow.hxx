@@ -1,6 +1,6 @@
 #pragma once
 
-#include <QMainWindow>
+#include <QtWidgets/QMainWindow>
 
 #include <ui/widgets/config.hxx>
 

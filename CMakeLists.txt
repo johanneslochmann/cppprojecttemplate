@@ -28,7 +28,7 @@ find_package(Gitstats)          # optional if gitstas should be built
 enable_testing()
 
 set(CMAKE_CXX_COMPILER ${CLANG_PROGRAM})
-set(PROJECT_COMPILER_FLAGS "-Wall -Werror -std=c++14 -ftemplate-backtrace-limit=0")
+set(PROJECT_COMPILER_FLAGS "-Wall -Werror -std=c++14 -ftemplate-backtrace-limit=0 -fPIC")
 
 include_directories(${GTEST_INCLUDE_DIRS})
 include_directories(${LIBPQXX_INCLUDE_DIR})
@@ -96,6 +96,7 @@ set(LIBRARY_PREFIX ${PROJECT_PREFIX})
 set(TEST_PROGRAM_PREFIX tst_)
 set(TEST_LIBRARY_PREFIX tst_lib_)
 
+set(DEMO_APP_NAME ${PROJECT_PREFIX}demo)
 set(CORE_LIBRARY_NAME ${LIBRARY_PREFIX}core)
 set(MODEL_LIBRARY_NAME ${LIBRARY_PREFIX}model)
 set(WIDGETS_LIBRARY_NAME ${LIBRARY_PREFIX}widgets)
