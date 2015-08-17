@@ -1,5 +1,7 @@
 #include "app.hxx"
 
+#include <apps/app/action.hxx>
+
 PROJECT_NAMESPACE_BEGIN
 APP_NAMESPACE_BEGIN
 
@@ -11,6 +13,8 @@ App::App(int &argc, char **argv)
     connect(this, &App::privateConnectToDatabase, m_conn, &PGCONN_NAMESPACE::Connection::connectToDatabase);
 
     connect(m_conn, &PGCONN_NAMESPACE::Connection::statusChanged, this, &App::onDatabaseConnectionStatusChanged);
+
+    initActions();
 }
 
 App *App::get()
@@ -35,6 +39,15 @@ void App::onDatabaseConnectionStatusChanged(const PGCONN_NAMESPACE::Connection::
     case(C::Disconnected): // fall through
     default: { emit databaseIsUnavailable(msg); break; }
     }
+}
+
+void App::initActions()
+{
+    m_quit = new Action(tr("&Quit"), this);
+    m_quit->setShortcut(QKeySequence::Quit);
+    connect(m_quit, &QAction::triggered, this, &App::quit);
+
+    initCustomActions();
 }
 
 APP_NAMESPACE_END

@@ -7,6 +7,8 @@
 #include <db/pgconn/connectiondata.hxx>
 #include <db/pgconn/connection.hxx>
 
+class QAction;
+
 PROJECT_NAMESPACE_BEGIN
 APP_NAMESPACE_BEGIN
 
@@ -18,6 +20,8 @@ public:
 
     static App* get();
 
+    QAction* quitAction() const { return m_quit; }
+
 public slots:
     void connectToDatabase(const PGCONN_NAMESPACE::ConnectionData& cd);
 
@@ -28,8 +32,15 @@ signals:
     void databaseIsAvailable(const QString& msg);
     void databaseIsUnavailable(const QString& msg);
 
+protected:
+    void initActions();
+
+    virtual void initCustomActions() {}
+
 private:
     PGCONN_NAMESPACE::Connection* m_conn;
+
+    QAction* m_quit;
 };
 
 APP_NAMESPACE_END
