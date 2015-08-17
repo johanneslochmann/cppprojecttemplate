@@ -7,6 +7,8 @@
 PROJECT_NAMESPACE_BEGIN
 WIDGETS_NAMESPACE_BEGIN
 
+class Menu;
+
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -16,6 +18,13 @@ public:
 signals:
 
 public slots:
+
+protected:
+    void initMenues();
+    virtual void initCustomMenues() {}
+
+private:
+    Menu* m_file;
 };
 
 WIDGETS_NAMESPACE_END
