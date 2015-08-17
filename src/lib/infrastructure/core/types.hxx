@@ -1,6 +1,6 @@
 #pragma once
 
-#include <core/config.hxx>
+#include <infrastructure/core/config.hxx>
 
 #include <string>
 #include <vector>

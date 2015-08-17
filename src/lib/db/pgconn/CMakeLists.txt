@@ -1,11 +1,11 @@
-set(LIBNAME ${CORE_LIBRARY_NAME})
+set(LIBNAME ${PGCONN_LIBRARY_NAME})
 
 set(LIBVERSION_MAJOR 1)
 set(LIBVERSION_MINOR 0)
 set(LIBVERSION_PATCH 0)
 
-set(MODULE_PREFIX Core)
-set(MODULE_SEPARATOR "::")
+set(MODULE_PREFIX PgConn)
+set(MODULE_NAMESPACE Pg)
 
 configure_file(config.hxx.in config.hxx)
 
@@ -16,12 +16,11 @@ set(CMAKE_CXX_FLAGS "${PROJECT_COMPILER_FLAGS}")
 
 set(HEADER_FILES
     config.hxx
-    tools.hxx
-    types.hxx
+    connectiondata.hxx
 )
 
 set(SOURCE_FILES
-    tools.cxx
+    connectiondata.cxx
 )
 
 add_library(${LIBNAME}
@@ -38,7 +37,8 @@ set_target_properties(${LIBNAME}
 
 target_link_libraries(
     ${LIBNAME}
-    ${Boost_LIBRARIES}
+    ${CORE_LIBRARY_NAME}
+    ${LIBPQXX_LIBRARIES}
 )
 
-add_subdirectory(test)
+#add_subdirectory(test)
