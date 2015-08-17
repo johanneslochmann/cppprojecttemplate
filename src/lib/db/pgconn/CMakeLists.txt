@@ -16,10 +16,12 @@ set(CMAKE_CXX_FLAGS "${PROJECT_COMPILER_FLAGS}")
 
 set(HEADER_FILES
     config.hxx
+    connection.hxx
     connectiondata.hxx
 )
 
 set(SOURCE_FILES
+    connection.cxx
     connectiondata.cxx
 )
 
@@ -35,10 +37,13 @@ set_target_properties(${LIBNAME}
     SOVERSION ${LIBSOVERSION}
 )
 
+set(CMAKE_AUTOMOC ON)
+
 target_link_libraries(
     ${LIBNAME}
     ${CORE_LIBRARY_NAME}
     ${LIBPQXX_LIBRARIES}
+    ${Qt5Widgets_LIBRARIES}
 )
 
 #add_subdirectory(test)
