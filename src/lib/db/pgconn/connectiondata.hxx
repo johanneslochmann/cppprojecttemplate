@@ -12,6 +12,8 @@ class ConnectionData
 public:
     ConnectionData();
     virtual ~ConnectionData();
+
+    const String connectionString() const;
 };
 
 PGCONN_NAMESPACE_END

@@ -13,5 +13,10 @@ ConnectionData::~ConnectionData()
 
 }
 
+const String ConnectionData::connectionString() const
+{
+    return "not implemented";
+}
+
 PGCONN_NAMESPACE_END
 PROJECT_NAMESPACE_END
