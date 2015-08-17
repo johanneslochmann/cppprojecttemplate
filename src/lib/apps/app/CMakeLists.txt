@@ -39,6 +39,6 @@ set(CMAKE_AUTOMOC ON)
 
 target_link_libraries(
     ${LIBNAME}
-    ${CORE_LIBRARY_NAME}
+    ${PGCONN_LIBRARY_NAME}
     ${Qt5Widgets_LIBRARIES}
 )
