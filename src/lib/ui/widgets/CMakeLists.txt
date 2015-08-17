@@ -17,10 +17,12 @@ set(CMAKE_CXX_FLAGS "${PROJECT_COMPILER_FLAGS}")
 set(HEADER_FILES
     config.hxx
     label.hxx
+    statuslabel.hxx
 )
 
 set(SOURCE_FILES
     label.cxx
+    statuslabel.cxx
 )
 
 add_library(${LIBNAME}
