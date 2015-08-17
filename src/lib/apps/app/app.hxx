@@ -16,6 +16,8 @@ class App : public QApplication
 public:
     explicit App(int& argc, char** argv);
 
+    static App* get();
+
 public slots:
     void connectToDatabase(const PGCONN_NAMESPACE::ConnectionData& cd);
 

@@ -13,6 +13,11 @@ App::App(int &argc, char **argv)
     connect(m_conn, &PGCONN_NAMESPACE::Connection::statusChanged, this, &App::onDatabaseConnectionStatusChanged);
 }
 
+App *App::get()
+{
+    return qobject_cast<App*>(qApp);
+}
+
 void App::connectToDatabase(const Pg::ConnectionData &cd)
 {
     emit privateConnectToDatabase(cd);

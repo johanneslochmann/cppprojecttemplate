@@ -18,11 +18,13 @@ set(HEADER_FILES
     config.hxx
     label.hxx
     statuslabel.hxx
+    databaseconnectionstatuslabel.hxx
 )
 
 set(SOURCE_FILES
     label.cxx
     statuslabel.cxx
+    databaseconnectionstatuslabel.cxx
 )
 
 add_library(${LIBNAME}
