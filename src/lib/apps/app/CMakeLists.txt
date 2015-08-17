@@ -18,10 +18,12 @@ set(CMAKE_AUTOMOC ON)
 set(HEADER_FILES
     config.hxx
     app.hxx
+    action.hxx
 )
 
 set(SOURCE_FILES
     app.cxx
+    action.cxx
 )
 
 add_library(${LIBNAME}
