@@ -20,12 +20,14 @@ set(HEADER_FILES
     app.hxx
     action.hxx
     databaseaction.hxx
+    actionforconnecteddatabase.hxx
 )
 
 set(SOURCE_FILES
     app.cxx
     action.cxx
     databaseaction.cxx
+    actionforconnecteddatabase.cxx
 )
 
 add_library(${LIBNAME}
