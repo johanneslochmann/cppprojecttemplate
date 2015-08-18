@@ -31,6 +31,7 @@ signals:
 
 public slots:
     void connectToDatabase(const ConnectionData& cd);
+    void disconnectFromDatabase();
 
 private:
     pqxx::connection* m_conn { nullptr };

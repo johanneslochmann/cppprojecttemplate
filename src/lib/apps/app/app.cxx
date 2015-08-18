@@ -59,6 +59,7 @@ void App::initActions()
     connect(m_connectToDatabase, &QAction::triggered, this, &App::connectToDatabase);
 
     m_disconnectFromDatabase = new ActionForAvailableDatabase(tr("&Disconnect from database"), this);
+    connect(m_disconnectFromDatabase, &QAction::triggered, m_conn, &PGCONN_NAMESPACE::Connection::disconnectFromDatabase);
 
     initCustomActions();
 }

@@ -33,5 +33,13 @@ void Connection::connectToDatabase(const ConnectionData &cd)
     }
 }
 
+void Connection::disconnectFromDatabase()
+{
+    emit statusChanged(ConnectionStates::Disconnecting, tr("Disconnecting..."));
+    delete m_conn;
+    m_conn = nullptr;
+    emit statusChanged(ConnectionStates::Disconnected, tr("Disconnected"));
+}
+
 PROJECT_NAMESPACE_END
 PGCONN_NAMESPACE_END
