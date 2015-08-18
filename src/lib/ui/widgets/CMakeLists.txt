@@ -33,6 +33,7 @@ set(HEADER_FILES
     intedit.hxx
     portedit.hxx
     databasenameedit.hxx
+    databaseusernameedit.hxx
 )
 
 set(SOURCE_FILES
@@ -52,6 +53,7 @@ set(SOURCE_FILES
     intedit.cxx
     portedit.cxx
     databasenameedit.cxx
+    databaseusernameedit.cxx
 )
 
 add_library(${LIBNAME}
