@@ -21,7 +21,13 @@ void MainWindow::initMenues()
     m_file = new Menu(tr("&File"), this);
     m_file->addAction(APP_NAMESPACE::App::get()->quitAction());
 
+    m_db = new Menu(tr("&Database"), this);
+    m_db->addAction(APP_NAMESPACE::App::get()->connectToDatabaseAction());
+    m_db->addSeparator();
+    m_db->addAction(APP_NAMESPACE::App::get()->disconnectFromDatabaseAction());
+
     menuBar()->addMenu(m_file);
+    menuBar()->addMenu(m_db);
 
     initCustomMenues();
 }

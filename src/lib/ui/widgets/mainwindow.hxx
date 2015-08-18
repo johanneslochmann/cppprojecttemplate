@@ -25,6 +25,7 @@ protected:
 
 private:
     Menu* m_file;
+    Menu* m_db;
 };
 
 WIDGETS_NAMESPACE_END

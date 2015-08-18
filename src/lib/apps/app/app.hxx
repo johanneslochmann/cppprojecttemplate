@@ -21,6 +21,8 @@ public:
     static App* get();
 
     QAction* quitAction() const { return m_quit; }
+    QAction* connectToDatabaseAction() const { return m_connectToDatabase; }
+    QAction* disconnectFromDatabaseAction() const { return m_disconnectFromDatabase; }
 
 public slots:
     void connectToDatabase(const PGCONN_NAMESPACE::ConnectionData& cd);
@@ -41,6 +43,8 @@ private:
     PGCONN_NAMESPACE::Connection* m_conn;
 
     QAction* m_quit;
+    QAction* m_connectToDatabase;
+    QAction* m_disconnectFromDatabase;
 };
 
 APP_NAMESPACE_END

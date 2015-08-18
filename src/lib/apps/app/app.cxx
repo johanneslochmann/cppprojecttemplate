@@ -1,6 +1,8 @@
 #include "app.hxx"
 
 #include <apps/app/action.hxx>
+#include <apps/app/actionforavailabledatabase.hxx>
+#include <apps/app/actionforunavailabledatabase.hxx>
 
 PROJECT_NAMESPACE_BEGIN
 APP_NAMESPACE_BEGIN
@@ -46,6 +48,10 @@ void App::initActions()
     m_quit = new Action(tr("&Quit"), this);
     m_quit->setShortcut(QKeySequence::Quit);
     connect(m_quit, &QAction::triggered, this, &App::quit);
+
+    m_connectToDatabase = new ActionForUnavailableDatabase(tr("&Connect to database..."), this, QKeySequence::Open);
+
+    m_disconnectFromDatabase = new ActionForAvailableDatabase(tr("&Disconnect from database"), this);
 
     initCustomActions();
 }
