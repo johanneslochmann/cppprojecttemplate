@@ -34,6 +34,7 @@ signals:
     void privateConnectToDatabase(const PGCONN_NAMESPACE::ConnectionData& cd);
     void databaseIsAvailable(const QString& msg);
     void databaseIsUnavailable(const QString& msg);
+    void databaseStatusChanged(PGCONN_NAMESPACE::Connection::ConnectionStates newStatus, const QString& msg);
 
     void requestDatabaseConnectionData();
 

@@ -15,6 +15,7 @@ App::App(int &argc, char **argv)
     connect(this, &App::privateConnectToDatabase, m_conn, &PGCONN_NAMESPACE::Connection::connectToDatabase);
 
     connect(m_conn, &PGCONN_NAMESPACE::Connection::statusChanged, this, &App::onDatabaseConnectionStatusChanged);
+    connect(m_conn, &PGCONN_NAMESPACE::Connection::statusChanged, this, &App::databaseStatusChanged);
 
     initActions();
 }
