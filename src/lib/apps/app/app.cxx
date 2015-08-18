@@ -4,6 +4,8 @@
 #include <apps/app/actionforavailabledatabase.hxx>
 #include <apps/app/actionforunavailabledatabase.hxx>
 
+#include <QtWidgets/QMessageBox>
+
 PROJECT_NAMESPACE_BEGIN
 APP_NAMESPACE_BEGIN
 
@@ -49,6 +51,11 @@ void App::onDatabaseConnectionStatusChanged(const PGCONN_NAMESPACE::Connection::
     }
 }
 
+void App::aboutProgram()
+{
+    QMessageBox::information(activeWindow(), tr("About %1").arg(applicationDisplayName()), tr("Not implemented"));
+}
+
 void App::initActions()
 {
     m_quit = new Action(tr("&Quit"), this);
@@ -60,6 +67,12 @@ void App::initActions()
 
     m_disconnectFromDatabase = new ActionForAvailableDatabase(tr("&Disconnect from database"), this);
     connect(m_disconnectFromDatabase, &QAction::triggered, m_conn, &PGCONN_NAMESPACE::Connection::disconnectFromDatabase);
+
+    m_aboutProgram = new Action(tr("About program..."), this);
+    connect(m_aboutProgram, &QAction::triggered, this, &App::aboutProgram);
+
+    m_aboutQt = new Action(tr("About Qt..."), this);
+    connect(m_aboutQt, &QAction::triggered, this, &App::aboutQt);
 
     initCustomActions();
 }

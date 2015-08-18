@@ -75,8 +75,15 @@ void MainWindow::initMenues()
     m_db->addSeparator();
     m_db->addAction(APP_NAMESPACE::App::get()->disconnectFromDatabaseAction());
 
+    m_help = new Menu(tr("&Help"), this);
+    m_help->addAction(APP_NAMESPACE::App::get()->aboutProgramAction());
+    m_help->addSeparator();
+    m_help->addAction(APP_NAMESPACE::App::get()->aboutQtAction());
+
     menuBar()->addMenu(m_file);
     menuBar()->addMenu(m_db);
+    menuBar()->addSeparator();
+    menuBar()->addMenu(m_help);
 
     initCustomMenues();
 }
