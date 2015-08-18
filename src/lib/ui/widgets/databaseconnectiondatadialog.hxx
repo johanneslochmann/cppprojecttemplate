@@ -32,6 +32,7 @@ private:
     PortEdit* m_port;
     QLineEdit* m_databaseName;
     QLineEdit* m_userName;
+    QLineEdit* m_password;
 
     PGCONN_NAMESPACE::ConnectionData m_cd;
 };
