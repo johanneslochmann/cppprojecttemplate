@@ -20,14 +20,14 @@ set(HEADER_FILES
     app.hxx
     action.hxx
     databaseaction.hxx
-    actionforconnecteddatabase.hxx
+    actionforavailabledatabase.hxx
 )
 
 set(SOURCE_FILES
     app.cxx
     action.cxx
     databaseaction.cxx
-    actionforconnecteddatabase.cxx
+    actionforavailabledatabase.cxx
 )
 
 add_library(${LIBNAME}
