@@ -12,6 +12,6 @@
 
 PROJECT_NAMESPACE_BEGIN
 APP_NAMESPACE_BEGIN
-static const std::string AppModuleName { "@MODULE_PREFIX@" };
+static const std::string appModuleName { "@MODULE_PREFIX@" };
 APP_NAMESPACE_END
 PROJECT_NAMESPACE_END

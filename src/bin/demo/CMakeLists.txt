@@ -1,5 +1,12 @@
 set(APPNAME ${DEMO_APP_NAME})
 
+set(APPLICATION_NAME ${DEMO_APP_NAME})
+set(APPLICATION_VERSION "1.0" )
+set(ORGANIZATION_NAME "jolo" )
+set(ORGANIZATION_DOMAIN "johanneslochmann.blogspot.com")
+
+configure_file(config.hxx.in config.hxx)
+
 set(CMAKE_CXX_FLAGS "${PROJECT_COMPILER_FLAGS}")
 SET(CMAKE_AUTOMOC ON)
 

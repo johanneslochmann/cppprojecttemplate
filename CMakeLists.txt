@@ -48,7 +48,8 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BIN_DIR})
 
 if (DOXYGEN_FOUND)
     configure_file(${CMAKE_CURRENT_SOURCE_DIR}/Doxyfile.in ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile @ONLY)
-    add_custom_target(doc
+    add_custom_target(
+        doc
         ${DOXYGEN_EXECUTABLE} ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile
         WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
         COMMENT "Generating API documentation with Doxygen"
@@ -57,7 +58,8 @@ if (DOXYGEN_FOUND)
 endif(DOXYGEN_FOUND)
 
 if(GITSTATS_FOUND)
-    add_custom_target(gitstat
+    add_custom_target(
+        gitstat
         ${GITSTATS_PROGRAM} ${CMAKE_SOURCE_DIR} ${PROJECT_GITSTATS_DIR}
         WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
         COMMENT "Generating git stats"
@@ -66,7 +68,8 @@ if(GITSTATS_FOUND)
 endif(GITSTATS_FOUND)
 
 if(SLOCCOUNT_FOUND)
-    add_custom_target(stat
+    add_custom_target(
+        stat
         ${SLOCCOUNT_PROGRAM} src
         WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
         COMMENT "Generating sloccount stats"
@@ -75,14 +78,16 @@ if(SLOCCOUNT_FOUND)
 endif(SLOCCOUNT_FOUND)
 
 if(GRAPHVIZ_FOUND)
-    add_custom_target(dependencies
+    add_custom_target(
+        dependencies
         COMMAND ${CMAKE_COMMAND} --graphviz=dependencies.dot ${PROJECT_SOURCE_DIR}
         WORKING_DIRECTORY ${PROJECT_BUILD_DIR}
         COMMENT "Calculating module dependencies"
         VERBATIM
     )
 
-    add_custom_target(dependencygraph
+    add_custom_target(
+        dependencygraph
         COMMAND ${GRAPHVIZ_PROGRAM} -Tsvg dependencies.dot -o dependencies.svg
         WORKING_DIRECTORY ${PROJECT_BUILD_DIR}
         COMMENT "Creating graphical module dependencies"

@@ -1,0 +1,12 @@
+#pragma once
+
+#include <infrastructure/core/config.hxx>
+
+PROJECT_NAMESPACE_BEGIN
+
+static const std::string applicationName { "@APPLICATION_NAME@" };
+static const std::string applicationVersion { "@APPLICATION_VERSION@" };
+static const std::string organizationName { "@ORGANIZATION_NAME@" };
+static const std::string organizationDomain { "@ORGANIZATION_DOMAIN@" };
+
+PROJECT_NAMESPACE_END
