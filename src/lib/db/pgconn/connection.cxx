@@ -20,6 +20,10 @@ void Connection::connectToDatabase(const ConnectionData &cd)
     try {
         emit statusChanged(ConnectionStates::Connecting, tr("Connecting..."));
 
+        if (m_conn) {
+            delete m_conn;
+        }
+
         m_conn = new pqxx::connection(cd.connectionString());
 
         emit statusChanged(ConnectionStates::Connected, tr("Connected"));

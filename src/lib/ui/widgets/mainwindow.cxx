@@ -36,7 +36,9 @@ void MainWindow::onGetDatabaseConnectionDataFromUser()
         return;
     }
 
-    emit connectToDatabase(dlg->connectionData());
+    auto cd = dlg->connectionData();
+
+    emit connectToDatabase(cd);
 }
 
 void MainWindow::onDatabaseConnectionStatusChanged(const PGCONN_NAMESPACE::Connection::ConnectionStates &newStatus, const QString &msg)
@@ -48,7 +50,7 @@ void MainWindow::onDatabaseConnectionStatusChanged(const PGCONN_NAMESPACE::Conne
         QMessageBox::critical(this, tr("Database Connection Failed"), QString("<p><b>%1</b></p><p>%2</p>")
                               .arg(tr("Database Connection Failed:"))
                               .arg(msg));
-        QTimer::singleShot(0, &MainWindow::onGetDatabaseConnectionDataFromUser);
+        QTimer::singleShot(0, this, &MainWindow::onGetDatabaseConnectionDataFromUser);
         break;
     }
     case(C::Undefined): // fall through
