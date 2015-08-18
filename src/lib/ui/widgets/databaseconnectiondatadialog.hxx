@@ -30,6 +30,7 @@ private:
     GridGroupBox* m_box;
     QLineEdit* m_host;
     PortEdit* m_port;
+    QLineEdit* m_databaseName;
 
     PGCONN_NAMESPACE::ConnectionData m_cd;
 };
