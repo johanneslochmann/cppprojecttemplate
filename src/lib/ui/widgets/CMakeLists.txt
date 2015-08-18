@@ -31,6 +31,7 @@ set(HEADER_FILES
     lineedit.hxx
     hostnameedit.hxx
     intedit.hxx
+    portedit.hxx
 )
 
 set(SOURCE_FILES
@@ -48,6 +49,7 @@ set(SOURCE_FILES
     lineedit.cxx
     hostnameedit.cxx
     intedit.cxx
+    portedit.cxx
 )
 
 add_library(${LIBNAME}
