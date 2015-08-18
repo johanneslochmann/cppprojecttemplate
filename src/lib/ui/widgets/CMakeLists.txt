@@ -23,6 +23,7 @@ set(HEADER_FILES
     mainwindow.hxx
     menu.hxx
     dialog.hxx
+    verticaldialog.hxx
 )
 
 set(SOURCE_FILES
@@ -32,6 +33,7 @@ set(SOURCE_FILES
     mainwindow.cxx
     menu.cxx
     dialog.cxx
+    verticaldialog.cxx
 )
 
 add_library(${LIBNAME}
