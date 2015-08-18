@@ -22,6 +22,7 @@ set(HEADER_FILES
     databaseconnectionstatuslabel.hxx
     mainwindow.hxx
     menu.hxx
+    dialog.hxx
 )
 
 set(SOURCE_FILES
@@ -30,6 +31,7 @@ set(SOURCE_FILES
     databaseconnectionstatuslabel.cxx
     mainwindow.cxx
     menu.cxx
+    dialog.cxx
 )
 
 add_library(${LIBNAME}
