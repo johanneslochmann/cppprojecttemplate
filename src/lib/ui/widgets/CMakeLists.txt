@@ -27,6 +27,7 @@ set(HEADER_FILES
     groupbox.hxx
     gridgroupbox.hxx
     databaseconnectiondatadialog.hxx
+    fieldlabel.hxx
 )
 
 set(SOURCE_FILES
@@ -40,6 +41,7 @@ set(SOURCE_FILES
     groupbox.cxx
     gridgroupbox.cxx
     databaseconnectiondatadialog.cxx
+    fieldlabel.cxx
 )
 
 add_library(${LIBNAME}
