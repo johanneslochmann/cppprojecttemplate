@@ -33,6 +33,9 @@ private:
     String m_databaseName { defaultDatabaseName };
     String m_userName { defaultUserName };
     String m_password { defaultPassword };
+
+    const String makePair(const String& field, const String& value) const;
+    const String makePair(const String& field, int value) const;
 };
 
 PGCONN_NAMESPACE_END

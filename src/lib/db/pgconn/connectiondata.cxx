@@ -1,21 +1,28 @@
 #include "connectiondata.hxx"
 
+#include <infrastructure/core/tools.hxx>
+
 PROJECT_NAMESPACE_BEGIN
 PGCONN_NAMESPACE_BEGIN
 
 ConnectionData::ConnectionData()
 {
-
 }
 
 ConnectionData::~ConnectionData()
 {
-
 }
 
 const String ConnectionData::connectionString() const
 {
-    return "not implemented";
+    StringVector buf;
+
+    buf.push_back(makePair("host", hostName()));
+    buf.push_back(makePair("port", port()));
+    buf.push_back(makePair("dbname", databaseName()));
+    buf.push_back(makePair("user", userName()));
+    buf.push_back(makePair("password", password()));
+    return join(buf, " ");
 }
 
 String ConnectionData::password() const
@@ -66,6 +73,23 @@ String ConnectionData::hostName() const
 void ConnectionData::setHostName(const String &hostName)
 {
     m_hostName = hostName;
+}
+
+const String ConnectionData::makePair(const String &field, const String &value) const
+{
+    StringStream s;
+
+    s << field << "=" << value;
+
+    return s.str();
+}
+
+const String ConnectionData::makePair(const String &field, int value) const
+{
+    StringStream s;
+    s << value;
+
+    return makePair(field, s.str());
 }
 
 PGCONN_NAMESPACE_END

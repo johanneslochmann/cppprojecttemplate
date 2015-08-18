@@ -25,15 +25,13 @@ MainWindow::MainWindow(QWidget *parent)
 
 void MainWindow::onGetDatabaseConnectionDataFromUser()
 {
-    PGCONN_NAMESPACE::ConnectionData cd;
-
     auto dlg = new DatabaseConnectionDataDialog(this);
 
     if (QDialog::Accepted != dlg->exec()) {
         return;
     }
 
-    emit connectToDatabase(cd);
+    emit connectToDatabase(dlg->connectionData());
 }
 
 void MainWindow::initMenues()
