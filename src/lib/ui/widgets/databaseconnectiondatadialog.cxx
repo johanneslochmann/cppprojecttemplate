@@ -37,6 +37,7 @@ void DatabaseConnectionDataDialog::createWidgets()
     m_box->setTitle(tr("&Database Connection Database"));
 
     m_host = m_box->createLabelledSingleRowWidget<HostNameEdit>(tr("&Host"), QString::fromStdString(m_cd.hostName()));
+    connect(m_host, &QLineEdit::textChanged, [=](const QString& val) { m_cd.setHostName(val.toStdString()); });
 }
 
 WIDGETS_NAMESPACE_END
