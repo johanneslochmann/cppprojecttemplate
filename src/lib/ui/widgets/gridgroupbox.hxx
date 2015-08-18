@@ -4,7 +4,7 @@
 
 #include <QtWidgets/QGridLayout>
 
-class Label;
+class FieldLabel;
 
 PROJECT_NAMESPACE_BEGIN
 WIDGETS_NAMESPACE_BEGIN
@@ -15,7 +15,7 @@ class GridGroupBox : public GroupBox
 public:
     explicit GridGroupBox(QWidget* p = nullptr);
 
-    template<typename WidgetT, typename ValueT, typename LabelT=Label>
+    template<typename WidgetT, typename ValueT, typename LabelT=FieldLabel>
     WidgetT* createLabelledSingleRowWidget(const QString& label, const ValueT& value) {
         auto lbl = new LabelT(label, this);
         auto w = new WidgetT(value, this);

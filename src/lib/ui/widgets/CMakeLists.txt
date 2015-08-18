@@ -29,6 +29,7 @@ set(HEADER_FILES
     databaseconnectiondatadialog.hxx
     fieldlabel.hxx
     lineedit.hxx
+    hostnameedit.hxx
 )
 
 set(SOURCE_FILES
@@ -44,6 +45,7 @@ set(SOURCE_FILES
     databaseconnectiondatadialog.cxx
     fieldlabel.cxx
     lineedit.cxx
+    hostnameedit.cxx
 )
 
 add_library(${LIBNAME}
