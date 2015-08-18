@@ -5,7 +5,7 @@
 PROJECT_NAMESPACE_BEGIN
 APP_NAMESPACE_BEGIN
 
-ActionForUnavailableDatabase::ActionForUnavailableDatabase(const QString &text, QWidget *p, const QKeySequence &seq)
+ActionForUnavailableDatabase::ActionForUnavailableDatabase(const QString &text, QObject *p, const QKeySequence &seq)
     : DatabaseAction(text, p)
 {
     if (!seq.isEmpty()) {

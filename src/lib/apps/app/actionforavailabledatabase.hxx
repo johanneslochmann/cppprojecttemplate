@@ -8,7 +8,7 @@ APP_NAMESPACE_BEGIN
 class ActionForAvailableDatabase : public DatabaseAction
 {
 public:
-    explicit ActionForAvailableDatabase(const QString& text, QWidget* p = nullptr, const QKeySequence& seq = {});
+    explicit ActionForAvailableDatabase(const QString& text, QObject* p = nullptr, const QKeySequence& seq = {});
 
 public slots:
     void onDatabaseAvailable();

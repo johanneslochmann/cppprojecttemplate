@@ -8,7 +8,7 @@ APP_NAMESPACE_BEGIN
 class ActionForUnavailableDatabase : public DatabaseAction
 {
 public:
-    explicit ActionForUnavailableDatabase(const QString& text, QWidget* p = nullptr, const QKeySequence& seq = {});
+    explicit ActionForUnavailableDatabase(const QString& text, QObject* p = nullptr, const QKeySequence& seq = {});
 
 public slots:
     void onDatabaseAvailable();
