@@ -21,9 +21,14 @@ This is a project template with the following features:
 In addition to the usual cmake generated targets these additional targets are provided:
 
 doc:
-	run doxygen on the source tree - only enabled if doxygen is found
+
+    run doxygen on the source tree - only enabled if doxygen is found
+
 stat:
-	run sloccount on the source tree - only enabled if sloccount is found
+
+    run sloccount on the source tree - only enabled if sloccount is found
+
 gitstats:
+
 	run gitstats on the source tree - only enabled if gitstats is found
 
