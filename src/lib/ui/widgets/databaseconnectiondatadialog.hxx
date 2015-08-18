@@ -10,6 +10,7 @@ PROJECT_NAMESPACE_BEGIN
 WIDGETS_NAMESPACE_BEGIN
 
 class GridGroupBox;
+class PortEdit;
 
 class DatabaseConnectionDataDialog : public VerticalDialog
 {
@@ -28,6 +29,7 @@ protected:
 private:
     GridGroupBox* m_box;
     QLineEdit* m_host;
+    PortEdit* m_port;
 
     PGCONN_NAMESPACE::ConnectionData m_cd;
 };
