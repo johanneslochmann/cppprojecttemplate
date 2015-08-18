@@ -8,9 +8,10 @@ int main(int argc, char** argv) {
     QCoreApplication::setApplicationVersion(QString::fromStdString(PROJECT_NAMESPACE::applicationVersion));
     QCoreApplication::setOrganizationName(QString::fromStdString(PROJECT_NAMESPACE::organizationName));
     QCoreApplication::setOrganizationDomain(QString::fromStdString(PROJECT_NAMESPACE::organizationDomain));
-    QApplication::setApplicationDisplayName(QObject::tr("%1 V. %2")
+    QApplication::setApplicationDisplayName(QObject::tr("%1 V. %2 by %3")
                                             .arg(QCoreApplication::applicationName())
-                                            .arg(QCoreApplication::applicationVersion()));
+                                            .arg(QCoreApplication::applicationVersion())
+                                            .arg(QCoreApplication::organizationName()));
 
     PROJECT_NAMESPACE::APP_NAMESPACE::App a(argc, argv);
     PROJECT_NAMESPACE::WIDGETS_NAMESPACE::MainWindow w;
