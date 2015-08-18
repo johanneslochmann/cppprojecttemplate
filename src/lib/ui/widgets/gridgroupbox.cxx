@@ -3,8 +3,8 @@
 PROJECT_NAMESPACE_BEGIN
 WIDGETS_NAMESPACE_BEGIN
 
-GridGroupBox::GridGroupBox(const QString &title, QWidget *p)
-    : GroupBox(title, p)
+GridGroupBox::GridGroupBox(QWidget *p)
+    : GroupBox(p)
 {
     m_layout = new QGridLayout(this);
 }

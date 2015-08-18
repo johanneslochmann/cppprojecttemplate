@@ -11,8 +11,9 @@ WIDGETS_NAMESPACE_BEGIN
 
 class GridGroupBox : public GroupBox
 {
+    Q_OBJECT
 public:
-    explicit GridGroupBox(const QString& title, QWidget* p = nullptr);
+    explicit GridGroupBox(QWidget* p = nullptr);
 
     template<typename WidgetT, typename ValueT, typename LabelT=Label>
     WidgetT* createLabelledSingleRowWidget(const QString& label, const ValueT& value) {

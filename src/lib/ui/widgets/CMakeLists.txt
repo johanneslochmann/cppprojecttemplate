@@ -26,6 +26,7 @@ set(HEADER_FILES
     verticaldialog.hxx
     groupbox.hxx
     gridgroupbox.hxx
+    databaseconnectiondatadialog.hxx
 )
 
 set(SOURCE_FILES
@@ -38,6 +39,7 @@ set(SOURCE_FILES
     verticaldialog.cxx
     groupbox.cxx
     gridgroupbox.cxx
+    databaseconnectiondatadialog.cxx
 )
 
 add_library(${LIBNAME}

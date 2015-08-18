@@ -1,3 +1,5 @@
+#pragma once
+
 #include <ui/widgets/dialog.hxx>
 
 PROJECT_NAMESPACE_BEGIN

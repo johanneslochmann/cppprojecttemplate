@@ -24,7 +24,7 @@ protected:
     T* createContentWidget() {
         m_contentWidget = new T(this);
         appendToMainLayout(m_contentWidget);
-        return m_contentWidget;
+        return contentWidget<T>();
     }
 
     QDialogButtonBox* createButtons(QDialogButtonBox::StandardButtons b = QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
