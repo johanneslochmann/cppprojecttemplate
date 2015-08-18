@@ -1,12 +1,14 @@
 #include "mainwindow.hxx"
 
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QStatusBar>
 
 #include <apps/app/app.hxx>
 #include <apps/app/action.hxx>
 
 #include <ui/widgets/menu.hxx>
 #include <ui/widgets/databaseconnectiondatadialog.hxx>
+#include <ui/widgets/databaseconnectionstatuslabel.hxx>
 
 PROJECT_NAMESPACE_BEGIN
 WIDGETS_NAMESPACE_BEGIN
@@ -14,6 +16,7 @@ WIDGETS_NAMESPACE_BEGIN
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
 {
+    initStatusBars();
     initMenues();
 
     connect(APP_NAMESPACE::App::get(), &APP_NAMESPACE::App::requestDatabaseConnectionData, this, &MainWindow::onGetDatabaseConnectionDataFromUser);
@@ -47,6 +50,12 @@ void MainWindow::initMenues()
     menuBar()->addMenu(m_db);
 
     initCustomMenues();
+}
+
+void MainWindow::initStatusBars()
+{
+    statusBar()->addPermanentWidget(new DatabaseConnectionStatusLabel(statusBar()));
+    initCustomStatusBars();
 }
 
 WIDGETS_NAMESPACE_END

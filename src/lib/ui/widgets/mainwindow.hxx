@@ -25,7 +25,10 @@ public slots:
 
 protected:
     void initMenues();
+    void initStatusBars();
+
     virtual void initCustomMenues() {}
+    virtual void initCustomStatusBars() {}
 
 private:
     Menu* m_file;
