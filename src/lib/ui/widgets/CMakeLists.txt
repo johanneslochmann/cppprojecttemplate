@@ -24,6 +24,8 @@ set(HEADER_FILES
     menu.hxx
     dialog.hxx
     verticaldialog.hxx
+    groupbox.hxx
+    gridgroupbox.hxx
 )
 
 set(SOURCE_FILES
@@ -34,6 +36,8 @@ set(SOURCE_FILES
     menu.cxx
     dialog.cxx
     verticaldialog.cxx
+    groupbox.cxx
+    gridgroupbox.cxx
 )
 
 add_library(${LIBNAME}
