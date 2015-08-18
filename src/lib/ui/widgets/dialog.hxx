@@ -27,11 +27,19 @@ protected:
         return contentWidget<T>();
     }
 
+    template<typename T>
+    T* createStatusWidget() {
+        m_statusWidget = new T(this);
+        appendToMainLayout(m_statusWidget);
+        return qobject_cast<T*>(m_statusWidget);
+    }
+
     QDialogButtonBox* createButtons(QDialogButtonBox::StandardButtons b = QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
 
     virtual void appendToMainLayout(QWidget* w);
 
 private:
+    QWidget* m_statusWidget { nullptr };
     QWidget* m_contentWidget { nullptr };
     QDialogButtonBox* m_buttons { nullptr };
 };
