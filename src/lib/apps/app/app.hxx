@@ -25,7 +25,8 @@ public:
     QAction* disconnectFromDatabaseAction() const { return m_disconnectFromDatabase; }
 
 public slots:
-    void connectToDatabase(const PGCONN_NAMESPACE::ConnectionData& cd);
+    void connectToDatabase();
+    void connectToDatabaseUsingConnectionData(const PGCONN_NAMESPACE::ConnectionData& cd);
 
     void onDatabaseConnectionStatusChanged(const PGCONN_NAMESPACE::Connection::ConnectionStates& newStatus, const QString& msg);
 
@@ -33,6 +34,8 @@ signals:
     void privateConnectToDatabase(const PGCONN_NAMESPACE::ConnectionData& cd);
     void databaseIsAvailable(const QString& msg);
     void databaseIsUnavailable(const QString& msg);
+
+    void requestDatabaseConnectionData();
 
 protected:
     void initActions();

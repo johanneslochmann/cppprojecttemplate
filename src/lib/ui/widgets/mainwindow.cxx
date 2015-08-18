@@ -2,10 +2,11 @@
 
 #include <QtWidgets/QMenuBar>
 
-#include <ui/widgets/menu.hxx>
-
 #include <apps/app/app.hxx>
 #include <apps/app/action.hxx>
+
+#include <ui/widgets/menu.hxx>
+#include <ui/widgets/databaseconnectiondatadialog.hxx>
 
 PROJECT_NAMESPACE_BEGIN
 WIDGETS_NAMESPACE_BEGIN
@@ -14,6 +15,22 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
 {
     initMenues();
+
+    connect(APP_NAMESPACE::App::get(), &APP_NAMESPACE::App::requestDatabaseConnectionData, this, &MainWindow::onGetDatabaseConnectionDataFromUser);
+    connect(this, &MainWindow::connectToDatabase, APP_NAMESPACE::App::get(), &APP_NAMESPACE::App::connectToDatabaseUsingConnectionData);
+}
+
+void MainWindow::onGetDatabaseConnectionDataFromUser()
+{
+    PGCONN_NAMESPACE::ConnectionData cd;
+
+    auto dlg = new DatabaseConnectionDataDialog(this);
+
+    if (QDialog::Accepted != dlg->exec()) {
+        return;
+    }
+
+    emit connectToDatabase(cd);
 }
 
 void MainWindow::initMenues()

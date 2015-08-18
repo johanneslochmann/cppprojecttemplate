@@ -24,7 +24,12 @@ App *App::get()
     return qobject_cast<App*>(qApp);
 }
 
-void App::connectToDatabase(const Pg::ConnectionData &cd)
+void App::connectToDatabase()
+{
+    emit requestDatabaseConnectionData();
+}
+
+void App::connectToDatabaseUsingConnectionData(const Pg::ConnectionData &cd)
 {
     emit privateConnectToDatabase(cd);
 }
@@ -50,6 +55,7 @@ void App::initActions()
     connect(m_quit, &QAction::triggered, this, &App::quit);
 
     m_connectToDatabase = new ActionForUnavailableDatabase(tr("&Connect to database..."), this, QKeySequence::Open);
+    connect(m_connectToDatabase, &QAction::triggered, this, &App::connectToDatabase);
 
     m_disconnectFromDatabase = new ActionForAvailableDatabase(tr("&Disconnect from database"), this);
 

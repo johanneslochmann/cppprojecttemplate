@@ -4,6 +4,8 @@
 
 #include <ui/widgets/config.hxx>
 
+#include <db/pgconn/connectiondata.hxx>
+
 PROJECT_NAMESPACE_BEGIN
 WIDGETS_NAMESPACE_BEGIN
 
@@ -16,8 +18,10 @@ public:
     explicit MainWindow(QWidget *parent = 0);
 
 signals:
+    void connectToDatabase(const PGCONN_NAMESPACE::ConnectionData& cd);
 
 public slots:
+    void onGetDatabaseConnectionDataFromUser();
 
 protected:
     void initMenues();
