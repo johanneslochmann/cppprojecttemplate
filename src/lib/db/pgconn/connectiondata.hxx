@@ -14,6 +14,25 @@ public:
     virtual ~ConnectionData();
 
     const String connectionString() const;
+
+    String password() const;
+    String userName() const;
+    String databaseName() const;
+    int port() const;
+    String hostName() const;
+
+    void setPassword(const String &password);
+    void setUserName(const String &userName);
+    void setDatabaseName(const String &databaseName);
+    void setPort(int port);
+    void setHostName(const String &hostName);
+
+private:
+    String m_hostName { defaultHostName };
+    int m_port { defaultPort };
+    String m_databaseName { defaultDatabaseName };
+    String m_userName { defaultUserName };
+    String m_password { defaultPassword };
 };
 
 PGCONN_NAMESPACE_END

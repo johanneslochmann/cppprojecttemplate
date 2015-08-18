@@ -6,6 +6,11 @@ set(LIBVERSION_PATCH 0)
 
 set(MODULE_PREFIX PgConn)
 set(MODULE_NAMESPACE Pg)
+set(DEFAULT_HOST_NAME localhost)
+set(DEFAULT_PORT 5433)
+set(DEFAULT_DATABASE_NAME testdb)
+set(DEFAULT_USER_NAME testusr)
+set(DEFAULT_PASSWORD ohWie5Ou)
 
 configure_file(config.hxx.in config.hxx)
 

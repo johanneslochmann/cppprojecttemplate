@@ -22,6 +22,7 @@ set(HEADER_FILES
     databaseaction.hxx
     actionforavailabledatabase.hxx
     actionforunavailabledatabase.hxx
+    settings.hxx
 )
 
 set(SOURCE_FILES
@@ -30,6 +31,7 @@ set(SOURCE_FILES
     databaseaction.cxx
     actionforavailabledatabase.cxx
     actionforunavailabledatabase.cxx
+    settings.cxx
 )
 
 add_library(${LIBNAME}
