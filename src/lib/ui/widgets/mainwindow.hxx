@@ -5,6 +5,7 @@
 #include <ui/widgets/config.hxx>
 
 #include <db/pgconn/connectiondata.hxx>
+#include <db/pgconn/connection.hxx>
 
 PROJECT_NAMESPACE_BEGIN
 WIDGETS_NAMESPACE_BEGIN
@@ -22,6 +23,7 @@ signals:
 
 public slots:
     void onGetDatabaseConnectionDataFromUser();
+    void onDatabaseConnectionStatusChanged(const Pg::Connection::ConnectionStates &newStatus, const QString& msg);
 
 protected:
     void initMenues();

@@ -1,7 +1,10 @@
 #include "mainwindow.hxx"
 
+#include <QtCore/QTimer>
+
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QMessageBox>
 
 #include <apps/app/app.hxx>
 #include <apps/app/action.hxx>
@@ -20,6 +23,8 @@ MainWindow::MainWindow(QWidget *parent)
     initMenues();
 
     connect(APP_NAMESPACE::App::get(), &APP_NAMESPACE::App::requestDatabaseConnectionData, this, &MainWindow::onGetDatabaseConnectionDataFromUser);
+    connect(APP_NAMESPACE::App::get(), &APP_NAMESPACE::App::databaseStatusChanged, this, &MainWindow::onDatabaseConnectionStatusChanged);
+
     connect(this, &MainWindow::connectToDatabase, APP_NAMESPACE::App::get(), &APP_NAMESPACE::App::connectToDatabaseUsingConnectionData);
 }
 
@@ -32,6 +37,30 @@ void MainWindow::onGetDatabaseConnectionDataFromUser()
     }
 
     emit connectToDatabase(dlg->connectionData());
+}
+
+void MainWindow::onDatabaseConnectionStatusChanged(const PGCONN_NAMESPACE::Connection::ConnectionStates &newStatus, const QString &msg)
+{
+    using C = PGCONN_NAMESPACE::Connection::ConnectionStates;
+
+    switch(newStatus) {
+    case(C::Failed): {
+        QMessageBox::critical(this, tr("Database Connection Failed"), QString("<p><b>%1</b></p><p>%2</p>")
+                              .arg(tr("Database Connection Failed:"))
+                              .arg(msg));
+        QTimer::singleShot(0, &MainWindow::onGetDatabaseConnectionDataFromUser);
+        break;
+    }
+    case(C::Undefined): // fall through
+    case(C::Connecting): // fall through
+    case(C::Connected): // fall through
+    case(C::Disconnecting): // fall through
+    case(C::Disconnected): // fall through
+    default: {
+        // do nothing
+        break;
+    }
+    };
 }
 
 void MainWindow::initMenues()
