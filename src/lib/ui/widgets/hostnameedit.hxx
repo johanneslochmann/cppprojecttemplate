@@ -8,7 +8,7 @@ WIDGETS_NAMESPACE_BEGIN
 class HostNameEdit: public LineEdit {
     Q_OBJECT
 public:
-    using LineEdit::LineEdit;
+    explicit HostNameEdit(const QString& host, QWidget* p = nullptr);
 };
 
 WIDGETS_NAMESPACE_END

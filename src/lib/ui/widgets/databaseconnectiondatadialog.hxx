@@ -4,6 +4,8 @@
 
 #include <db/pgconn/connectiondata.hxx>
 
+class QLineEdit;
+
 PROJECT_NAMESPACE_BEGIN
 WIDGETS_NAMESPACE_BEGIN
 
@@ -25,6 +27,8 @@ protected:
 
 private:
     GridGroupBox* m_box;
+    QLineEdit* m_host;
+
     PGCONN_NAMESPACE::ConnectionData m_cd;
 };
 

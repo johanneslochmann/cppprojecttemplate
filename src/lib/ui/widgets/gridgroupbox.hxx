@@ -4,7 +4,7 @@
 
 #include <QtWidgets/QGridLayout>
 
-class FieldLabel;
+#include <ui/widgets/fieldlabel.hxx>
 
 PROJECT_NAMESPACE_BEGIN
 WIDGETS_NAMESPACE_BEGIN
