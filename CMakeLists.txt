@@ -101,6 +101,9 @@ set(LIBRARY_PREFIX ${PROJECT_PREFIX})
 set(TEST_PROGRAM_PREFIX tst_)
 set(TEST_LIBRARY_PREFIX tst_lib_)
 
+set(ORGANIZATION_NAME "jolo" )                              # used by QApplication
+set(ORGANIZATION_DOMAIN "johanneslochmann.blogspot.com")    # used by QApplication
+
 set(DEMO_APP_NAME ${PROJECT_PREFIX}demo)
 set(CORE_LIBRARY_NAME ${LIBRARY_PREFIX}core)
 set(MODEL_LIBRARY_NAME ${LIBRARY_PREFIX}model)
