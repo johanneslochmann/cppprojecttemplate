@@ -30,6 +30,7 @@ set(HEADER_FILES
     fieldlabel.hxx
     lineedit.hxx
     hostnameedit.hxx
+    intedit.hxx
 )
 
 set(SOURCE_FILES
@@ -46,6 +47,7 @@ set(SOURCE_FILES
     fieldlabel.cxx
     lineedit.cxx
     hostnameedit.cxx
+    intedit.cxx
 )
 
 add_library(${LIBNAME}
