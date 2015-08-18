@@ -9,6 +9,7 @@
 #include <ui/widgets/hostnameedit.hxx>
 #include <ui/widgets/portedit.hxx>
 #include <ui/widgets/databasenameedit.hxx>
+#include <ui/widgets/databaseusernameedit.hxx>
 
 PROJECT_NAMESPACE_BEGIN
 WIDGETS_NAMESPACE_BEGIN
@@ -41,10 +42,12 @@ void DatabaseConnectionDataDialog::createWidgets()
     m_host = m_box->createLabelledSingleRowWidget<HostNameEdit>(tr("&Host"), QString::fromStdString(m_cd.hostName()));
     m_port = m_box->createLabelledSingleRowWidget<PortEdit>(tr("P&ort"), m_cd.port());
     m_databaseName = m_box->createLabelledSingleRowWidget<DatabaseNameEdit>(tr("&Database"), QString::fromStdString(m_cd.databaseName()));
+    m_userName = m_box->createLabelledSingleRowWidget<DatabaseUserNameEdit>(tr("&User"), QString::fromStdString(m_cd.userName()));
 
     connect(m_host, &QLineEdit::textChanged, [=](const QString& val) { m_cd.setHostName(val.toStdString()); });
     connect(m_port, &PortEdit::valueChanged, [=](int val) { m_cd.setPort(val); });
     connect(m_databaseName, &QLineEdit::textChanged, [=](const QString& h) { m_cd.setDatabaseName(h.toStdString()); });
+    connect(m_userName, &QLineEdit::textChanged, [=](const QString& u) { m_cd.setUserName(u.toStdString()); });
 }
 
 WIDGETS_NAMESPACE_END
