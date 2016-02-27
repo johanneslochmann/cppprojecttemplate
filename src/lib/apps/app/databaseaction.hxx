@@ -2,7 +2,7 @@
 
 #include <apps/app/action.hxx>
 
-PROJECT_NAMESPACE_BEGIN
+PRAM_NS_BEGIN
 APP_NAMESPACE_BEGIN
 
 class DatabaseAction : public Action
@@ -13,4 +13,4 @@ public:
 };
 
 APP_NAMESPACE_END
-PROJECT_NAMESPACE_END
+PRAM_NS_END

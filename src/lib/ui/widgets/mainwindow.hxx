@@ -7,7 +7,7 @@
 #include <db/pgconn/connectiondata.hxx>
 #include <db/pgconn/connection.hxx>
 
-PROJECT_NAMESPACE_BEGIN
+PRAM_NS_BEGIN
 WIDGETS_NAMESPACE_BEGIN
 
 class Menu;
@@ -39,4 +39,4 @@ private:
 };
 
 WIDGETS_NAMESPACE_END
-PROJECT_NAMESPACE_END
+PRAM_NS_END

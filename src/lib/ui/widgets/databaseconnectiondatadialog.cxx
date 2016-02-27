@@ -12,7 +12,7 @@
 #include <ui/widgets/databaseusernameedit.hxx>
 #include <ui/widgets/passwordedit.hxx>
 
-PROJECT_NAMESPACE_BEGIN
+PRAM_NS_BEGIN
 WIDGETS_NAMESPACE_BEGIN
 
 DatabaseConnectionDataDialog::DatabaseConnectionDataDialog(QWidget *p)
@@ -56,4 +56,4 @@ void DatabaseConnectionDataDialog::createWidgets()
 }
 
 WIDGETS_NAMESPACE_END
-PROJECT_NAMESPACE_END
+PRAM_NS_END

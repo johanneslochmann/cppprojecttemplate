@@ -10,7 +10,7 @@
 #define PGCONN_NAMESPACE_BEGIN namespace PGCONN_NAMESPACE {
 #define PGCONN_NAMESPACE_END }
 
-PROJECT_NAMESPACE_BEGIN
+PRAM_NS_BEGIN
 PGCONN_NAMESPACE_BEGIN
 static const std::string pgConnModuleName { "@MODULE_PREFIX@" };
 
@@ -21,4 +21,4 @@ static const std::string defaultUserName { "@DEFAULT_USER_NAME@" };
 static const std::string defaultPassword { "@DEFAULT_PASSWORD@" };
 
 PGCONN_NAMESPACE_END
-PROJECT_NAMESPACE_END
+PRAM_NS_END

@@ -2,7 +2,7 @@
 
 #include <infrastructure/core/tools.hxx>
 
-PROJECT_NAMESPACE_BEGIN
+PRAM_NS_BEGIN
 PGCONN_NAMESPACE_BEGIN
 
 ConnectionData::ConnectionData()
@@ -93,4 +93,4 @@ const String ConnectionData::makePair(const String &field, int value) const
 }
 
 PGCONN_NAMESPACE_END
-PROJECT_NAMESPACE_END
+PRAM_NS_END

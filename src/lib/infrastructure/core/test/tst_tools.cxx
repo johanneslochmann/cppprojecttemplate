@@ -2,7 +2,7 @@
 
 #include <infrastructure/core/tools.hxx>
 
-PROJECT_NAMESPACE_BEGIN
+PRAM_NS_BEGIN
 
 TEST(tst_tools, toLowerCase) {
     String upper { "FOO BAR" };
@@ -20,4 +20,4 @@ TEST(tst_tools, replace) {
     ASSERT_EQ("a big lamp", replace(msg, "little", "big"));
 }
 
-PROJECT_NAMESPACE_END
+PRAM_NS_END

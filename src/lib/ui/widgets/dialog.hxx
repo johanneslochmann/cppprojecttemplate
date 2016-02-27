@@ -5,7 +5,7 @@
 
 #include <ui/widgets/config.hxx>
 
-PROJECT_NAMESPACE_BEGIN
+PRAM_NS_BEGIN
 WIDGETS_NAMESPACE_BEGIN
 
 class Dialog : public QDialog
@@ -44,5 +44,5 @@ private:
     QDialogButtonBox* m_buttons { nullptr };
 };
 
-PROJECT_NAMESPACE_END
+PRAM_NS_END
 WIDGETS_NAMESPACE_END

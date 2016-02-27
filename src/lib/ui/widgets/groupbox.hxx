@@ -4,7 +4,7 @@
 
 #include <ui/widgets/config.hxx>
 
-PROJECT_NAMESPACE_BEGIN
+PRAM_NS_BEGIN
 WIDGETS_NAMESPACE_BEGIN
 
 class GroupBox : public QGroupBox
@@ -15,4 +15,4 @@ public:
 };
 
 WIDGETS_NAMESPACE_END
-PROJECT_NAMESPACE_END
+PRAM_NS_END

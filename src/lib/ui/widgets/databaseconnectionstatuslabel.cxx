@@ -2,7 +2,7 @@
 
 #include <apps/app/app.hxx>
 
-PROJECT_NAMESPACE_BEGIN
+PRAM_NS_BEGIN
 WIDGETS_NAMESPACE_BEGIN
 
 DatabaseConnectionStatusLabel::DatabaseConnectionStatusLabel(QWidget* p)
@@ -56,4 +56,4 @@ void DatabaseConnectionStatusLabel::onDatabaseStatusChanged(const PGCONN_NAMESPA
 }
 
 WIDGETS_NAMESPACE_END
-PROJECT_NAMESPACE_END
+PRAM_NS_END

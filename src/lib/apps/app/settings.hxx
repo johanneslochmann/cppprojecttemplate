@@ -4,7 +4,7 @@
 
 #include <apps/app/config.hxx>
 
-PROJECT_NAMESPACE_BEGIN
+PRAM_NS_BEGIN
 APP_NAMESPACE_BEGIN
 
 class Settings
@@ -19,4 +19,4 @@ public:
 };
 
 APP_NAMESPACE_END
-PROJECT_NAMESPACE_END
+PRAM_NS_END

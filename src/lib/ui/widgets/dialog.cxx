@@ -2,7 +2,7 @@
 
 #include <QtWidgets/QLayout>
 
-PROJECT_NAMESPACE_BEGIN
+PRAM_NS_BEGIN
 WIDGETS_NAMESPACE_BEGIN
 
 QDialogButtonBox *Dialog::createButtons(QDialogButtonBox::StandardButtons b)
@@ -22,5 +22,5 @@ void Dialog::appendToMainLayout(QWidget *w)
     layout()->addWidget(w);
 }
 
-PROJECT_NAMESPACE_END
+PRAM_NS_END
 WIDGETS_NAMESPACE_END

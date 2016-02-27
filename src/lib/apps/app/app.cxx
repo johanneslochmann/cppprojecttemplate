@@ -6,7 +6,7 @@
 
 #include <QtWidgets/QMessageBox>
 
-PROJECT_NAMESPACE_BEGIN
+PRAM_NS_BEGIN
 APP_NAMESPACE_BEGIN
 
 App::App(int &argc, char **argv)
@@ -78,4 +78,4 @@ void App::initActions()
 }
 
 APP_NAMESPACE_END
-PROJECT_NAMESPACE_END
+PRAM_NS_END

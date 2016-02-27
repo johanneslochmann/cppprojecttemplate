@@ -2,7 +2,7 @@
 
 #include <apps/app/app.hxx>
 
-PROJECT_NAMESPACE_BEGIN
+PRAM_NS_BEGIN
 APP_NAMESPACE_BEGIN
 
 ActionForAvailableDatabase::ActionForAvailableDatabase(const QString &text, QObject *p, const QKeySequence &seq)
@@ -29,4 +29,4 @@ void ActionForAvailableDatabase::onDatabaseUnavailable()
 }
 
 APP_NAMESPACE_END
-PROJECT_NAMESPACE_END
+PRAM_NS_END

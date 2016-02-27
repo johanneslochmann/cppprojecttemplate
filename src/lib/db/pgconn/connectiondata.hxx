@@ -4,7 +4,7 @@
 
 #include <db/pgconn/config.hxx>
 
-PROJECT_NAMESPACE_BEGIN
+PRAM_NS_BEGIN
 PGCONN_NAMESPACE_BEGIN
 
 class ConnectionData
@@ -39,4 +39,4 @@ private:
 };
 
 PGCONN_NAMESPACE_END
-PROJECT_NAMESPACE_END
+PRAM_NS_END

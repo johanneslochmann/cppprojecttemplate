@@ -2,7 +2,7 @@
 
 #include <QtWidgets/QVBoxLayout>
 
-PROJECT_NAMESPACE_BEGIN
+PRAM_NS_BEGIN
 WIDGETS_NAMESPACE_BEGIN
 
 VerticalDialog::VerticalDialog(const QString &title, QWidget *p)
@@ -13,4 +13,4 @@ VerticalDialog::VerticalDialog(const QString &title, QWidget *p)
 }
 
 WIDGETS_NAMESPACE_END
-PROJECT_NAMESPACE_END
+PRAM_NS_END

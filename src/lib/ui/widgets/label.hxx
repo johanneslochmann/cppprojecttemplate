@@ -4,7 +4,7 @@
 
 #include <QLabel>
 
-PROJECT_NAMESPACE_BEGIN
+PRAM_NS_BEGIN
 WIDGETS_NAMESPACE_BEGIN
 
 class Label: public QLabel
@@ -14,5 +14,5 @@ public:
     using QLabel::QLabel;
 };
 
-PROJECT_NAMESPACE_END
+PRAM_NS_END
 WIDGETS_NAMESPACE_END

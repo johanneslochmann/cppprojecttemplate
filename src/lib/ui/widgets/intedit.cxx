@@ -2,7 +2,7 @@
 
 #include <QtGui/QIntValidator>
 
-PROJECT_NAMESPACE_BEGIN
+PRAM_NS_BEGIN
 WIDGETS_NAMESPACE_BEGIN
 
 IntEdit::IntEdit(int val, QWidget *p)
@@ -25,4 +25,4 @@ void IntEdit::setValue(int val)
 }
 
 WIDGETS_NAMESPACE_END
-PROJECT_NAMESPACE_END
+PRAM_NS_END

@@ -7,7 +7,7 @@
 #include <db/pgconn/config.hxx>
 #include <db/pgconn/connectiondata.hxx>
 
-PROJECT_NAMESPACE_BEGIN
+PRAM_NS_BEGIN
 PGCONN_NAMESPACE_BEGIN
 
 class Connection : public QObject
@@ -37,5 +37,5 @@ private:
     pqxx::connection* m_conn { nullptr };
 };
 
-PROJECT_NAMESPACE_END
+PRAM_NS_END
 PGCONN_NAMESPACE_END

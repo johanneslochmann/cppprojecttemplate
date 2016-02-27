@@ -2,7 +2,7 @@
 
 #include <models/model/config.hxx>
 
-PROJECT_NAMESPACE_BEGIN
+PRAM_NS_BEGIN
 MODEL_NAMESPACE_BEGIN
 
 class Model
@@ -12,5 +12,5 @@ public:
     virtual ~Model();
 };
 
-PROJECT_NAMESPACE_END
+PRAM_NS_END
 MODEL_NAMESPACE_END

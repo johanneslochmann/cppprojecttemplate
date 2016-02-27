@@ -1,6 +1,6 @@
 #include "connection.hxx"
 
-PROJECT_NAMESPACE_BEGIN
+PRAM_NS_BEGIN
 PGCONN_NAMESPACE_BEGIN
 
 Connection::Connection(QObject *parent)
@@ -41,5 +41,5 @@ void Connection::disconnectFromDatabase()
     emit statusChanged(ConnectionStates::Disconnected, tr("Disconnected"));
 }
 
-PROJECT_NAMESPACE_END
+PRAM_NS_END
 PGCONN_NAMESPACE_END

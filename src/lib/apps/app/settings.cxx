@@ -4,7 +4,7 @@
 
 #include <db/pgconn/config.hxx>
 
-PROJECT_NAMESPACE_BEGIN
+PRAM_NS_BEGIN
 APP_NAMESPACE_BEGIN
 
 Settings::Settings()
@@ -41,4 +41,4 @@ PGCONN_NAMESPACE::ConnectionData Settings::loadConnectionData() {
 }
 
 APP_NAMESPACE_END
-PROJECT_NAMESPACE_END
+PRAM_NS_END

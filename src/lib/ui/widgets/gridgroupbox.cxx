@@ -1,6 +1,6 @@
 #include "gridgroupbox.hxx"
 
-PROJECT_NAMESPACE_BEGIN
+PRAM_NS_BEGIN
 WIDGETS_NAMESPACE_BEGIN
 
 GridGroupBox::GridGroupBox(QWidget *p)
@@ -10,4 +10,4 @@ GridGroupBox::GridGroupBox(QWidget *p)
 }
 
 WIDGETS_NAMESPACE_END
-PROJECT_NAMESPACE_END
+PRAM_NS_END

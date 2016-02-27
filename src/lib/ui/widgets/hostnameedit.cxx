@@ -1,6 +1,6 @@
 #include "hostnameedit.hxx"
 
-PROJECT_NAMESPACE_BEGIN
+PRAM_NS_BEGIN
 WIDGETS_NAMESPACE_BEGIN
 
 HostNameEdit::HostNameEdit(const QString &host, QWidget *p)
@@ -10,4 +10,4 @@ HostNameEdit::HostNameEdit(const QString &host, QWidget *p)
 }
 
 WIDGETS_NAMESPACE_END
-PROJECT_NAMESPACE_END
+PRAM_NS_END

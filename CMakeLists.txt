@@ -1,19 +1,14 @@
 cmake_minimum_required(VERSION 3.0)
 set(CMAKE_BUILD_TYPE Debug)
-project(cppprojecttemplate CXX C)
+project(pgasg CXX C)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_VERBOSE_MAKEFILE ON)
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/buildsys")
+list(APPEND CMAKE_PREFIX_PATH "/opt/Qt/5.5/gcc_64")
 
-# configure boost
-set(BOOST_ROOT /opt/boost)
-set(BOOST_INCLUDEDIR ${BOOST_ROOT}/include)
-set(BOOST_LIBRARYDIR ${BOOST_ROOT}/lib)
-set(Boost_NO_SYSTEM_PATHS ON)
 find_package(Boost 1.56 REQUIRED)
-
 find_package(Clang REQUIRED)    # we use clang++
 find_package(Pqxx REQUIRED)     # we use libpqxx and postgres as our database
 find_package(Threads REQUIRED)  # required by GTest
@@ -23,7 +18,7 @@ find_package(Qt5Widgets REQUIRED)    # Qt5 widgets
 find_package(Doxygen)           # optional if doc target should be built
 find_package(Sloccount)         # optional if stat target should be built
 find_package(Graphviz)          # optional if dependencygraph should be built
-find_package(Gitstats)          # optional if gitstas should be built
+find_package(Gitstats)          # optional if gitstat should be built
 
 enable_testing()
 
@@ -95,7 +90,7 @@ if(GRAPHVIZ_FOUND)
     )
 endif(GRAPHVIZ_FOUND)
 
-set(PROJECT_NAMESPACE ${PROJECT_NAME}) # this will be the globally used namespace
+set(PRAM_NS ${PROJECT_NAME}) # this will be the globally used namespace
 set(PROJECT_PREFIX ${PROJECT_NAME}_)
 set(LIBRARY_PREFIX ${PROJECT_PREFIX})
 set(TEST_PROGRAM_PREFIX tst_)

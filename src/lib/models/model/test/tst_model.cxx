@@ -2,7 +2,7 @@
 
 #include <models/model/model.hxx>
 
-PROJECT_NAMESPACE_BEGIN
+PRAM_NS_BEGIN
 MODEL_NAMESPACE_BEGIN
 
 TEST(tst_model, testCtor) {
@@ -11,4 +11,4 @@ TEST(tst_model, testCtor) {
 }
 
 MODEL_NAMESPACE_END
-PROJECT_NAMESPACE_END
+PRAM_NS_END

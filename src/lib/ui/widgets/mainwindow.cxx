@@ -13,7 +13,7 @@
 #include <ui/widgets/databaseconnectiondatadialog.hxx>
 #include <ui/widgets/databaseconnectionstatuslabel.hxx>
 
-PROJECT_NAMESPACE_BEGIN
+PRAM_NS_BEGIN
 WIDGETS_NAMESPACE_BEGIN
 
 MainWindow::MainWindow(QWidget *parent)
@@ -95,4 +95,4 @@ void MainWindow::initStatusBars()
 }
 
 WIDGETS_NAMESPACE_END
-PROJECT_NAMESPACE_END
+PRAM_NS_END

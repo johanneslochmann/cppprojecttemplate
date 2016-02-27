@@ -2,7 +2,7 @@
 
 #include <ui/widgets/lineedit.hxx>
 
-PROJECT_NAMESPACE_BEGIN
+PRAM_NS_BEGIN
 WIDGETS_NAMESPACE_BEGIN
 
 class PasswordEdit : public LineEdit
@@ -13,4 +13,4 @@ public:
 };
 
 WIDGETS_NAMESPACE_END
-PROJECT_NAMESPACE_END
+PRAM_NS_END

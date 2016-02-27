@@ -2,7 +2,7 @@
 
 #include <apps/app/databaseaction.hxx>
 
-PROJECT_NAMESPACE_BEGIN
+PRAM_NS_BEGIN
 APP_NAMESPACE_BEGIN
 
 class ActionForUnavailableDatabase : public DatabaseAction
@@ -15,5 +15,5 @@ public slots:
     void onDatabaseUnavailable();
 };
 
-PROJECT_NAMESPACE_END
+PRAM_NS_END
 APP_NAMESPACE_END

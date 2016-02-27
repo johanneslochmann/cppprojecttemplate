@@ -4,7 +4,7 @@
 #include <boost/algorithm/string/case_conv.hpp>
 #include <boost/algorithm/string/replace.hpp>
 
-PROJECT_NAMESPACE_BEGIN
+PRAM_NS_BEGIN
 
 String join(const StringVector& data, const String& sep) {
     return boost::algorithm::join(data, sep);
@@ -20,4 +20,4 @@ String replace(const String &str, const String &from, const String &to)
     return boost::algorithm::replace_all_copy(str, from, to);
 }
 
-PROJECT_NAMESPACE_END
+PRAM_NS_END
